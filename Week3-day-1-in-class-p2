@@ -1,0 +1,51 @@
+/**************************************************
+Program #2 
+
+Filename:	IP5_sortedWords_MaxT_AlexisB.cpp
+Author:     Max T.
+Navigator:  Alexis B
+
+Obejctive:	Demonstrate use of an if/else if/else structure to sort 3 words entered by the user into alphabetical order.
+Specification:	Write a program that asks the user to enter three words. The program should sort and display the words in alphabetical order.
+Be sure to test your program with words in all possible orderings. 
+***************************************************/
+#include <iostream> // for cin, cout, endl
+#include <string> //for the string
+using namespace std;
+
+int main()
+{
+    string word1;
+    string word2;
+    string word3;
+    
+    cout<< "Please enter 3 different 3 words, pressing enter after each!" << endl;
+    cin >> word1 >> word2 >> word3;
+    
+    if ( word1 <= word2 && word2 <= word3 )
+    {
+        cout << word1<< '\t' << word2 << '\t' << word3 << endl;
+    }
+    else if ( word1 <= word3 && word3 <= word2 )
+    {
+        cout << word1<< '\t' << word3 << '\t' << word2 << endl;
+    }
+    else if ( word2 <= word1 && word1 <= word3 )
+    {
+        cout << word2<< '\t' << word1 << '\t' << word3 << endl;
+    }
+    else if ( word2 <= word3 && word3 <= word1 )
+    {
+        cout << word2<< '\t' << word3 << '\t' << word1 << endl;
+    }
+    else if ( word3 <= word1 && word1 <= word2 )
+    {
+        cout << word3<< '\t' << word1 << '\t' << word2 << endl;
+    }
+    if ( word3 <= word2 && word2 <= word1 )
+    {
+        cout << word3<< '\t' << word2 << '\t' << word1 << endl;
+    }
+
+    return 0;
+}
